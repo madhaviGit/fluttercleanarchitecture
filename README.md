@@ -110,3 +110,6 @@ Copy
 git add .
 git commit -m "Test commit"
 If any files are not formatted, the commit will be blocked, and you'll see an error message.
+
+
+at terminal give command ->  dart format . 
