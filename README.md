@@ -62,3 +62,51 @@ git push -u origin main
 **Add lint rules to project**
 
 
+
+------------------------------------------------------
+
+**Add commit checks (Git pre-commit)**
+
+1. Use Git Hooks for Pre-Commit Checks
+   Git hooks are scripts that run automatically before or after certain Git events (e.g., pre-commit, pre-push). You can use a pre-commit hook to ensure code is formatted before committing.
+
+Steps:
+Navigate to your project's .git/hooks directory:
+
+bash
+
+cd your_project/.git/hooks
+Create a pre-commit file (if it doesn't exist):
+
+bash
+
+touch pre-commit
+Make the pre-commit file executable:
+
+bash
+Copy
+chmod +x pre-commit
+Add the following script to the pre-commit file:
+
+bash
+Copy
+#!/bin/bash
+
+# Run dart format and check for changes
+echo "Running dart format..."
+dart format --set-exit-if-changed .
+
+if [ $? -ne 0 ]; then
+echo "Error: Some files were not formatted. Please run 'dart format .' and commit again."
+exit 1
+fi
+
+echo "Code is properly formatted. Proceeding with commit."
+exit 0
+Test the hook by making a commit:
+
+bash
+Copy
+git add .
+git commit -m "Test commit"
+If any files are not formatted, the commit will be blocked, and you'll see an error message.
