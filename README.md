@@ -113,3 +113,7 @@ If any files are not formatted, the commit will be blocked, and you'll see an er
 
 
 at terminal give command ->  dart format . 
+
+
+
+--------------------------------------------------------------------------
