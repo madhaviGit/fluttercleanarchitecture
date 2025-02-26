@@ -1,0 +1,40 @@
+name: Flutter CI/CD
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.27.3"  # Specify the Flutter version (e.g., 3.13.0)
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Step 4: Run Flutter format check
+      - name: Check formatting
+        run: dart format --set-exit-if-changed .
+
+      # Step 5: Run Flutter analyze
+      - name: Analyze code
+        run: flutter analyze
+
+      # Step 6: Run Flutter tests
+      - name: Run tests
+        run: flutter test
