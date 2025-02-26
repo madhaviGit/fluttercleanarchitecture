@@ -30,10 +30,10 @@ jobs:
       # Step 4: Run Flutter format check
       - name: Check formatting
         run: dart format --set-exit-if-changed .
+              git diff
+              git add .
+              git commit -m "Formatted code using dart format"
 
-      - name:  git commit message
-        run: git add .
-             git commit -m "Formatted code using dart format"
 
       # Step 5: Run Flutter analyze
       - name: Analyze code
