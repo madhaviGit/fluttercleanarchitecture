@@ -24,6 +24,6 @@ abstract class AppEnvironment {
         baseUrl = "API base URL";
         environmentName = "production";
         break;
-      }
+    }
   }
 }

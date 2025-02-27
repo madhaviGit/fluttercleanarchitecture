@@ -5,26 +5,62 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_environments/comman_main.dart';
+import 'package:flutter_environments/comman_main.dart';*/
+// test/math_utils_test.dart
+import 'package:flutter_environments/mathe_test.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  group('MathUtils', () {
+    test('add() should return the sum of two numbers', () {
+      // Arrange
+      const a = 5;
+      const b = 3;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+      // Act
+      final result = MathUtils.add(a, b);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+      // Assert
+      expect(result, equals(8));
+    });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    test('subtract() should return the difference of two numbers', () {
+      // Arrange
+      const a = 10;
+      const b = 4;
+
+      // Act
+      final result = MathUtils.subtract(a, b);
+
+      // Assert
+      expect(result, equals(6));
+    });
+
+    test('add() should handle negative numbers', () {
+      // Arrange
+      const a = -5;
+      const b = 3;
+
+      // Act
+      final result = MathUtils.add(a, b);
+
+      // Assert
+      expect(result, equals(-2));
+    });
+
+    test('subtract() should handle negative results', () {
+      // Arrange
+      const a = 3;
+      const b = 5;
+
+      // Act
+      final result = MathUtils.subtract(a, b);
+
+      // Assert
+      expect(result, equals(-2));
+    });
   });
 }
