@@ -70,7 +70,6 @@ linter:
     - prefer_iterable_whereType
     - prefer_null_aware_operators
     - prefer_relative_imports
-    - prefer_single_quotes
     - prefer_spread_collections
     - recursive_getters
     - slash_for_doc_comments
