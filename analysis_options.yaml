@@ -20,7 +20,6 @@ linter:
     - annotate_overrides
     - avoid_empty_else
     - avoid_function_literals_in_foreach_calls
-    - avoid_print
     - avoid_relative_lib_imports
     - avoid_return_types_on_setters
     - avoid_single_cascade_in_expression_statements
