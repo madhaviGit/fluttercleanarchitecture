@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_environments/presentation/screens/HomeScreen.dart';
+import '../../presentation/screens/HomeScreen.dart';
 
 class AppRoutes {
   static Route onGenerateRoutes(RouteSettings settings) {
