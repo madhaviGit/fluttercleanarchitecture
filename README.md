@@ -223,3 +223,16 @@ If any files are not formatted, the commit will be blocked, and you'll see an er
 at terminal give command ->  dart format . 
 
 --------------------------------------------------------------------------
+Dependency injection setup
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+State Management Pattern - Dio package
+Dio is a powerful and popular HTTP client for Dart, which is commonly used for making network
+requests, such as API calls, in Flutter applications.
+
+clean architecture to encapsulate business logic <Success, Failure>
+--------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
