@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'di/service_locator.dart';
-import 'flavor_config.dart';
+import 'presentation/screens/home_screen.dart';
 
 void commonMain() {
   setupLocator();
@@ -16,21 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            "Environment name: ${AppEnvironment.environmentName}",
-            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-          ),
-          const Spacer(),
-          const Text(
-            "Welcome to OAuth",
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-          ),
-        ],
-      ),
+      home: HomeScreen(),
     );
   }
 }

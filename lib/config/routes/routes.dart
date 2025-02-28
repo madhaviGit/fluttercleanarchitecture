@@ -5,7 +5,7 @@ class AppRoutes {
   static Route onGenerateRoutes(RouteSettings settings) {
     switch (settings.name) {
       case '/':
-        return _materialRoute(const HomeScreen());
+        return _materialRoute(HomeScreen());
 
       /*    case '/ArticleDetails':
         return _materialRoute(ArticleDetailsView(article: settings.arguments as ArticleEntity));
@@ -14,7 +14,7 @@ class AppRoutes {
         return _materialRoute(const SavedArticles());*/
 
       default:
-        return _materialRoute(const HomeScreen());
+        return _materialRoute(HomeScreen());
     }
   }
 
