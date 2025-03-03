@@ -13,31 +13,37 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Google Sign-In with GetIt'),
+        title: const Text('Google Sign-In'),
+        centerTitle: true,
+        titleTextStyle: const TextStyle(
+            color: Colors.blueAccent,
+            fontSize: 20,
+            fontWeight: FontWeight.bold),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          ElevatedButton(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                onPressed: () async {
+                  final GoogleSignInAccount? account =
+                      await _googleAuthService.signInWithGoogle();
+                  if (account != null) {
+                    print("Signed in as: ${account.displayName}");
+                    print("Email: ${account.email}");
+                  } else {
+                    print("Sign-in failed");
+                  }
+                },
+                child: const Text("Google SignIn")),
+            ElevatedButton(
               onPressed: () async {
-                final GoogleSignInAccount? account =
-                    await _googleAuthService.signInWithGoogle();
-                if (account != null) {
-                  print("Signed in as: ${account.displayName}");
-                  print("Email: ${account.email}");
-                } else {
-                  print("Sign-in failed");
-                }
+                await _googleAuthService.signOut();
               },
-              child: const Text("Google SignIn")),
-          ElevatedButton(
-            onPressed: () async {
-              await _googleAuthService.signOut();
-            },
-            child: const Text('Sign out'),
-          )
-        ],
+              child: const Text('Sign out'),
+            )
+          ],
+        ),
       ),
     );
   }
