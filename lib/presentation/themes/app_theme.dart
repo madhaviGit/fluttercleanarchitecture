@@ -11,13 +11,13 @@ class AppThemes {
           primaryColor: AppColors.white,
           barBackgroundColor: AppColors.barBackgroundColor,
         ),
-        primaryColor: AppColors.materialize(AppColors.Green),
-        primarySwatch: AppColors.materialize(AppColors.Green),
-        hintColor: AppColors.materialize(AppColors.Green),
+        primaryColor: AppColors.materialize(AppColors.green),
+        primarySwatch: AppColors.materialize(AppColors.green),
+        hintColor: AppColors.materialize(AppColors.green),
         scaffoldBackgroundColor: AppColors.screenBackgroundColor,
         tabBarTheme: TabBarTheme.of(context).copyWith(
           indicator: const UnderlineTabIndicator(
-            borderSide: BorderSide(width: 2, color: AppColors.Green),
+            borderSide: BorderSide(width: 2, color: AppColors.green),
           ),
           labelPadding: const EdgeInsets.symmetric(horizontal: 24.0),
           labelStyle: AppTextStyles.boldTextStyle(fontSize: FontSize.size14),

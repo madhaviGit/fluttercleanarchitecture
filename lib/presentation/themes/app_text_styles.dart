@@ -106,7 +106,7 @@ class AppTextStyles {
   ///
   /// FontWeigth: Bold, FontSize: 13, Color: oddset green (default)
   static TextStyle buttonTextStyle({
-    Color color = AppColors.Green,
+    Color color = AppColors.green,
   }) =>
       _createTextStyle(_boldFont, FontSize.size13, color);
 

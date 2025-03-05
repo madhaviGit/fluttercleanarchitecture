@@ -11,17 +11,17 @@ abstract class AppColors {
   static const Color textColor = Color(0xFF000000);
   static const Color errorColor = Color(0xFFB00020);
 
-  static const GreenAccent = Color.fromRGBO(222, 245, 236, 1);
-  static const Green = Color.fromRGBO(0, 167, 93, 1);
-  static const GreenLight = Color.fromRGBO(35, 210, 164, 1);
-  static const GreenDark = Color.fromRGBO(3, 149, 83, 1);
-  static const Blue = Color.fromRGBO(0, 144, 215, 1);
+  static const greenAccent = Color.fromRGBO(222, 245, 236, 1);
+  static const green = Color.fromRGBO(0, 167, 93, 1);
+  static const greenLight = Color.fromRGBO(35, 210, 164, 1);
+  static const greenDark = Color.fromRGBO(3, 149, 83, 1);
+  static const blue = Color.fromRGBO(0, 144, 215, 1);
   static const iosBlue = Color.fromRGBO(0, 122, 255, 1);
-  static const Yellow = Color.fromRGBO(255, 192, 16, 1);
-  static const Red = Color.fromRGBO(241, 0, 0, 1);
-  static const UpdateIndicatorRed = Color.fromRGBO(210, 35, 33, 1.0);
-  static const Orange = Color.fromRGBO(235, 93, 55, 1);
-  static const DarkYellow = Color(0xFFEBA337);
+  static const yellow = Color.fromRGBO(255, 192, 16, 1);
+  static const red = Color.fromRGBO(241, 0, 0, 1);
+  static const updateIndicatorRed = Color.fromRGBO(210, 35, 33, 1.0);
+  static const orange = Color.fromRGBO(235, 93, 55, 1);
+  static const darkYellow = Color(0xFFEBA337);
 
   static const screenBackgroundColor = Color.fromRGBO(255, 255, 255, 1);
   static const barBackgroundColor = Color.fromRGBO(255, 255, 255, 1);
