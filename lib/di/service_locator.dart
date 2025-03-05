@@ -12,4 +12,9 @@ void setupLocator() {
   getIt.registerSingleton<AuthService>(AuthService());
   // Register GoogleAuthService as a lazy singleton
   getIt.registerLazySingleton(GoogleAuthService.new);
+  getIt.registerSingleton<BottomNavigationService>(BottomNavigationService());
+}
+
+class BottomNavigationService {
+  int currentIndex = 0;
 }

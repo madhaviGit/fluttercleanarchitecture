@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../presentation/screens/home_screen.dart';
+import '../../presentation/screens/login_screen.dart';
 
 class AppRoutes {
   static Route onGenerateRoutes(RouteSettings settings) {
     switch (settings.name) {
       case '/':
-        return _materialRoute(HomeScreen());
+        return _materialRoute(LoginScreen());
 
       /*    case '/ArticleDetails':
         return _materialRoute(ArticleDetailsView(article: settings.arguments as ArticleEntity));
@@ -14,7 +14,7 @@ class AppRoutes {
         return _materialRoute(const SavedArticles());*/
 
       default:
-        return _materialRoute(HomeScreen());
+        return _materialRoute(LoginScreen());
     }
   }
 
