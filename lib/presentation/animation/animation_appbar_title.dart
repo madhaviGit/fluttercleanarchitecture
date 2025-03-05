@@ -17,7 +17,7 @@ class ScrollToTitleAnimation extends StatefulWidget {
   const ScrollToTitleAnimation({super.key});
 
   @override
-  _ScrollToTitleAnimationState createState() => _ScrollToTitleAnimationState();
+  State<ScrollToTitleAnimation> createState() => _ScrollToTitleAnimationState();
 }
 
 class _ScrollToTitleAnimationState extends State<ScrollToTitleAnimation>
